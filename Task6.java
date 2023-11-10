@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Sketch extends PApplet {
+public class Task6 extends PApplet {
 	
 	
   /**
@@ -28,8 +28,11 @@ public class Sketch extends PApplet {
    
   if (colourSwap(true)) {
 
+  // Generates smiley face colours if mouse pressed
+  drawFace(intX, intY, (intX / 30) + (intY / 15), (intX / 7) + (intY / 4), (intX / 2) + (intY / 1));
+
   //Generates stem colours if mouse pressed
-  drawStem (intX, intY, (intX / 20) + (intY / 10), (intX / 50) + (intY / 22), (intX / 5) + (intY / 30));
+  drawStem(intX, intY, (intX / 20) + (intY / 10), (intX / 50) + (intY / 22), (intX / 5) + (intY / 30));
 
   // Generates flower colours if mouse pressed
    drawFlower(intX, intY, (intX / 1) + (intY / 2), (intX / 4) + (intY / 8), (intX / 16) + (intY / 32));
@@ -41,13 +44,16 @@ public class Sketch extends PApplet {
 
   else {
    
-  //Generates stem colours
+  // Generates smiley face colours if mouse not pressed
+  drawFace(intX, intY, (intX / 30) + (intY / 15), (intX / 7) + (intY / 4), (intX / 2) + (intY / 1));
+
+  //Generates stem colours if mouse not pressed
   drawStem (intX, intY, (intX / 1) + (intY / 1), (intX / 50) + (intY / 22), (intX / 37) + (intY / 3));
 
-  // Generates flower colours
+  // Generates flower colours if mouse not pressed
   drawFlower(intX, intY, (intX / 8) + (intY / 15), (intX / 50) + (intY / 22), (intX / 37) + (intY / 3));
   
-  // Generates pistil colours if mouse pressed
+  // Generates pistil colours if mouse not pressed
    drawPistil(intX, intY, (intX / 14) + (intY / 1), (intX / 7) + (intY / 7), (intX / 5) + (intY / 3));
 
       }
@@ -95,6 +101,13 @@ public void drawPistil(int intFlowerX , int intFlowerY, int intRed, int intGreen
 // Prints the pistil of the flower
 fill(intRed, intGreen, intBlue);
 ellipse(intFlowerX, intFlowerY - 40, 35, 35);
+stroke(256);}
+
+public void drawFace(int intFlowerX , int intFlowerY, int intRed, int intGreen, int intBlue) {
+
+// Prints the outside of the smiley face
+fill(intRed, intGreen, intBlue);
+ellipse(intFlowerX, intFlowerY - 150, 100, 35);
 stroke(256);}
 
 public boolean colourSwap(boolean MousePressed) {
