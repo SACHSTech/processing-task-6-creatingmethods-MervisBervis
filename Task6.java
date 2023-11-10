@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Task6 extends PApplet {
+public class Sketch extends PApplet {
 	
 	
   /**
