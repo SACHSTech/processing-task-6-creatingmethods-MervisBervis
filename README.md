@@ -16,7 +16,7 @@ Acquire the learning objectives by reviewing [this page from happycoding.io](htt
 Demonstrate your learning objectives by:
 
 ### Level 2
-Take a program from a previous processing task and create a method with parameters to draw a composite object (consisting of various shapes i.e house, stick figure, etc) at various locations specified by the method parameters.
+Take a program from a previous processing task and create a method with parameters to draw a composite object (consisting of various shapes i.e house, st ick figure, etc) at various locations specified by the method parameters.
 
 ### Level 3
 Level 2 specifications +:
